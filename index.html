@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#05070c" />
+  <meta name="description" content="Pokégrand Exchange — sealed trading card packs, vending support, and machine placement inquiries in Florida." />
+  <title>Pokégrand Exchange | PGE</title>
+  <link rel="icon" type="image/png" href="./assets/pge-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./config.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" data-view-link="home" aria-label="PGE home"><span class="brand-mark">PGE</span><span class="brand-sub">POKÉGRAND EXCHANGE</span></a>
+      <a class="instagram" id="instagram-header" href="https://www.instagram.com/pokegrandexchange/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4"/><circle class="insta-dot" cx="17.5" cy="6.5" r="1"/></svg><span>Instagram</span><span class="external">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section id="view-home" class="view home-view" aria-labelledby="hero-title">
+        <div class="hero">
+          <div class="hero-art"><img src="./assets/pge-logo.png" alt="PGE tropical sunset trading card logo with palms and ocean waves" /></div>
+          <div class="eyebrow"><span class="sun-dot"></span> SOUTH FLORIDA • TCG VENDING</div>
+          <h1 id="hero-title">The next pull<br/>starts <em>here.</em></h1>
+          <p class="hero-description">Welcome to <strong>Pokégrand Exchange.</strong> Sealed packs, collector energy, and a little Florida sunshine. Request what you want stocked or let us know if a vend went wrong.</p>
+          <div class="chips"><span>✦ BOOSTERS</span><span>✦ BLISTERS</span><span>✦ SEALED</span></div>
+        </div>
+        <div class="section-kicker">WHAT CAN WE HELP WITH?</div>
+        <div class="action-stack">
+          <a href="#product" data-view-link="product" class="action action-gold"><span class="action-icon">✦</span><span class="action-copy"><strong>Request a Product</strong><small>Tell us what you'd love to see stocked.</small></span><span class="action-arrow">↗</span></a>
+          <a href="#problem" data-view-link="problem" class="action action-blue"><span class="action-icon">✳</span><span class="action-copy"><strong>Report a Problem</strong><small>Charge, jam, or a pack that never dropped.</small></span><span class="action-arrow">↗</span></a>
+          <a href="#machine" data-view-link="machine" class="action action-dark"><span class="action-icon">⌂</span><span class="action-copy"><strong>Request a Machine</strong><small>Bring PGE to your business or venue.</small></span><span class="action-arrow">↗</span></a>
+        </div>
+        <div class="home-footer-note"><span class="wave">〰</span> Good vibes. Great pulls. Florida grown.</div>
+      </section>
+
+      <section id="view-product" class="view form-view" hidden aria-labelledby="product-title">
+        <a href="#home" data-view-link="home" class="back">← Back to home</a>
+        <div class="form-intro"><div class="eyebrow">THE WISHLIST</div><h1 id="product-title">Request a <em>Product.</em></h1><p>Have a pack, box, or set in mind? Tell us what you'd like stocked at your machine.</p></div>
+        <form class="form-card" data-form-type="Product Request">
+          <label>Full name <span>*</span><input name="name" type="text" autocomplete="name" required placeholder="Your name" maxlength="120" /></label>
+          <label>Email <span>*</span><input name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+          <label>Phone number <small>Optional</small><input name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567" /></label>
+          <label>Machine location <span>*</span><input name="machine_location" type="text" required placeholder="Business name, city, or machine location" maxlength="180" /></label>
+          <label>What are you requesting? <span>*</span><textarea name="requested_product" required rows="5" placeholder="The pack, box, or product you'd like to see stocked..."></textarea></label>
+          <button type="submit" class="submit gold">Send Product Request <span>↗</span></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="view-problem" class="view form-view" hidden aria-labelledby="problem-title">
+        <a href="#home" data-view-link="home" class="back">← Back to home</a>
+        <div class="form-intro"><div class="eyebrow">WE'VE GOT YOU</div><h1 id="problem-title">Report a <em>Problem.</em></h1><p>Something didn't go as planned? Share the details and we'll review your report. Please don't include card numbers or other payment details.</p></div>
+        <form class="form-card" data-form-type="Problem Report">
+          <label>Full name <span>*</span><input name="name" type="text" autocomplete="name" required placeholder="Your name" maxlength="120" /></label>
+          <label>Email <span>*</span><input name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+          <label>Phone number <span>*</span><input name="phone" type="tel" autocomplete="tel" required placeholder="(555) 123-4567" /></label>
+          <label>Machine location <span>*</span><input name="machine_location" type="text" required placeholder="Where was the machine?" maxlength="180" /></label>
+          <div class="two-col"><label>Transaction date <span>*</span><input name="transaction_date" type="date" required /></label><label>Transaction time <span>*</span><input name="transaction_time" type="time" required /></label></div>
+          <label>Product that had the issue <span>*</span><input name="affected_product" type="text" required placeholder="Which pack or item?" maxlength="180" /></label>
+          <label>What went wrong? <span>*</span><textarea name="issue_description" required rows="5" placeholder="Tell us what happened (for example, charged but pack didn't drop)."></textarea></label>
+          <button type="submit" class="submit blue">Send Problem Report <span>↗</span></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="view-machine" class="view form-view" hidden aria-labelledby="machine-title">
+        <a href="#home" data-view-link="home" class="back">← Back to home</a>
+        <div class="form-intro"><div class="eyebrow">BUSINESS PARTNERSHIPS</div><h1 id="machine-title">Bring PGE to <em>your spot.</em></h1><p>Want a trading card vending machine at your business? Let's talk about a placement opportunity.</p></div>
+        <div class="partnership-info"><div class="partnership-icon">☀</div><h2>A new reason to stop by.</h2><p>Retail shops, entertainment venues, cafés, and other high-traffic locations are welcome to inquire. We'll review your space and discuss possible placement arrangements.</p></div>
+        <div class="contact-box"><div class="section-kicker">REACH US DIRECTLY</div><a id="business-email" href="mailto:pokegrandexchange@gmail.com">✉ <span>pokegrandexchange@gmail.com</span> ↗</a><a id="business-phone" href="tel:+15612070337">☎ <span>(561) 207-0337</span> ↗</a><a id="business-instagram" href="https://www.instagram.com/pokegrandexchange/" target="_blank" rel="noopener noreferrer">◎ <span>@pokegrandexchange</span> ↗</a></div>
+        <div class="form-intro mini"><div class="eyebrow">LET'S CONNECT</div><h2>Machine Placement Inquiry</h2><p>Prefer a form? Fill this out and we'll receive your inquiry by email.</p></div>
+        <form class="form-card" data-form-type="Machine Placement Inquiry">
+          <label>Contact name <span>*</span><input name="name" type="text" autocomplete="name" required placeholder="Your name" maxlength="120" /></label>
+          <label>Business name <span>*</span><input name="business_name" type="text" required placeholder="Name of your business" maxlength="180" /></label>
+          <label>Email <span>*</span><input name="email" type="email" autocomplete="email" required placeholder="you@business.com" /></label>
+          <label>Phone number <span>*</span><input name="phone" type="tel" autocomplete="tel" required placeholder="(555) 123-4567" /></label>
+          <label>Business address / proposed location <span>*</span><input name="business_location" type="text" required placeholder="Street, city, and state" maxlength="250" /></label>
+          <label>Type of business <span>*</span><select name="business_type" required><option value="" disabled selected>Select business type</option><option>Retail store</option><option>Entertainment venue</option><option>Café / restaurant</option><option>Shopping center</option><option>College / campus</option><option>Other</option></select></label>
+          <label>Tell us about your location <small>Optional</small><textarea name="additional_information" rows="4" placeholder="Foot traffic, available space, or any questions..."></textarea></label>
+          <button type="submit" class="submit gold">Send Placement Inquiry <span>↗</span></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <footer class="footer"><span>© <span id="year"></span> POKÉGRAND EXCHANGE</span><span>MADE FOR COLLECTORS ☀</span></footer>
+  </div>
+</body>
+</html>

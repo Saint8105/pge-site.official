@@ -1,0 +1,42 @@
+POKÉGRAND EXCHANGE — GITHUB PAGES SETUP
+======================================
+
+1) UPLOAD THE WEBSITE
+- Create a new PUBLIC repository at https://github.com/new (example name: pge-new).
+- On the repository page, choose "uploading an existing file".
+- Extract the ZIP on your computer first.
+- Upload index.html, styles.css, script.js, config.js, START-HERE.txt, and the entire assets folder.
+- Important: index.html must be at the TOP level of the repository, NOT inside pge-website or another folder.
+- Commit the files.
+
+2) PUBLISH FOR FREE
+- Repository > Settings > Pages.
+- Source: Deploy from a branch.
+- Branch: main; Folder: / (root); Save.
+- Wait a few minutes. GitHub will show your site URL (usually https://USERNAME.github.io/REPOSITORY/).
+- All file references are relative, so the site works on a GitHub Pages project URL.
+
+3) CONNECT AUTOMATIC EMAIL SUBMISSIONS (REQUIRED)
+- GitHub Pages is static hosting and cannot send emails on its own.
+- Create a Formspree account at https://formspree.io/ and verify your email.
+- Create a new form and set its destination/notification email to pokegrandexchange@gmail.com.
+- Copy your real form endpoint from Formspree. It looks like https://formspree.io/f/xxxxxxxx.
+- On GitHub, open config.js, click the pencil, and paste the endpoint inside the quotes for formspreeEndpoint.
+- Commit changes, wait for Pages to redeploy, and test EACH of the three forms.
+- Confirm that all three test submissions arrive at your inbox. Check spam and Formspree dashboard.
+- Free Formspree plans may have submission limits. Check current plan limits and notification settings in Formspree.
+- Until configured, the site intentionally displays a clear 'not connected' message instead of claiming success.
+
+4) CUSTOMIZE CONTACT DETAILS
+- config.js already contains:
+  Email: pokegrandexchange@gmail.com
+  Instagram: https://www.instagram.com/pokegrandexchange/
+  Phone: 5612070337
+- These are public contact details. Do not put passwords or private API keys in config.js.
+
+5) NOTES
+- Forms use a secure HTTPS POST to Formspree and show success only after Formspree accepts the submission.
+- Formspree processes submitted customer contact data. Review its privacy/terms as appropriate.
+- The site does not store submissions in the browser or GitHub.
+- No React, npm, or build step is needed.
+- The tropical PGE image is in assets/pge-logo.png.
